@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { FloatingWhatsApp } from '.'
 
-describe('ExampleComponent', () => {
+describe('FloatingWhatsApp', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(FloatingWhatsApp).toBeTruthy()
   })
 })
