@@ -15,18 +15,15 @@
     transition: box-shadow 0.2s;
     cursor: pointer;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .floatingWpp .floatingWppButton img,
 .floatingWpp .floatingWppButton svg {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    border-radius: 50%;
+    width: 70%;
+    height: 70%;
 }
 
 .floatingWpp:hover {

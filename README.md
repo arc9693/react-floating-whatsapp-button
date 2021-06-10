@@ -15,15 +15,31 @@ npm install --save react-floating-whatsapp
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-floating-whatsapp'
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import 'react-floating-whatsapp/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <FloatingWhatsApp />
   }
 }
 ```
+## Props(optional)
+  Name | Description | Type | Default
+  ---|---|---|---
+  phone| Phone number | string | '1231231231'
+  message| Sender's default message input | string | ''
+  size| Button size | string | '70px'
+  backgroundColor| Button background color |string | '#25D366'
+  position| left/right |string | 'right'
+  popupMessage| |string | 'Hello, how can we help you?'
+  showPopup| |boolean | false
+  showOnIE| |boolean | true
+  autoOpenTimeout| in ms |number | 2000
+  headerColor| |string | '#128C7E'
+  headerTitle| |string | 'WhatsApp Chat'
+  zIndex| z-index of the component| number | 0
+  buttonImage| Base64 encoded button image | string | Whatsapp icon's image
 
 ## License
 
