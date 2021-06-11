@@ -1,13 +1,13 @@
-# react-floating-whatsapp
+# react-floating-whatsapp-button
 
 > React component to add floating whatsapp chat button with window and an optional message to the app.
 
-[![NPM](https://img.shields.io/npm/v/react-floating-whatsapp.svg)](https://www.npmjs.com/package/react-floating-whatsapp) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-floating-whatsapp-button.svg)](https://www.npmjs.com/package/react-floating-whatsapp-button) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-floating-whatsapp
+npm install --save react-floating-whatsapp-button
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save react-floating-whatsapp
 ```tsx
 import React, { Component } from 'react'
 
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
-import 'react-floating-whatsapp/dist/index.css'
+import { FloatingWhatsApp } from 'react-floating-whatsapp-button'
+import 'react-floating-whatsapp-button/dist/index.css'
 
 class Example extends Component {
   render() {
@@ -24,6 +24,9 @@ class Example extends Component {
   }
 }
 ```
+## Example
+[https://arc9693.github.io/react-floating-whatsapp-button/](https://arc9693.github.io/react-floating-whatsapp-button/)
+
 ## Props(optional)
   Name | Description | Type | Default
   ---|---|---|---

@@ -1,6 +1,6 @@
 import React from 'react'
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
-import 'react-floating-whatsapp/dist/index.css'
+import { FloatingWhatsApp } from 'react-floating-whatsapp-button'
+import 'react-floating-whatsapp-button/dist/index.css'
 
 interface FloatingWhatsAppProps {
   phone?: string
