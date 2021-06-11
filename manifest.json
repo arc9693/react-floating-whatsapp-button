@@ -1,0 +1,10 @@
+{
+  "short_name": "react-floating-whatsapp",
+  "name": "react-floating-whatsapp",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
