@@ -1,6 +1,6 @@
 {
   "name": "react-floating-whatsapp-button",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component to add floating whatsapp chat button with window and an optional message to the app.",
   "author": "arc9693",
   "license": "MIT",
