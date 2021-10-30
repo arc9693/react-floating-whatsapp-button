@@ -1,21 +1,7 @@
 import * as React from 'react'
+// eslint-disable-next-line no-unused-vars
+import { Props } from './props'
 import styles from './styles.module.css'
-
-interface Props {
-  phone?: string
-  message?: string
-  size?: string
-  backgroundColor?: string
-  position?: string
-  popupMessage?: string
-  showPopup?: boolean
-  showOnIE?: boolean
-  autoOpenTimeout?: number
-  headerColor?: string
-  headerTitle?: string
-  zIndex?: number
-  buttonImage?: string
-}
 
 export const FloatingWhatsApp = ({
   phone = '1231231231',
@@ -53,9 +39,10 @@ export const FloatingWhatsApp = ({
   }
 
   const isInternetExplorer = () => {
-    var userAgent = window.navigator.userAgent
+    const userAgent = navigator.userAgent
     return (
-      userAgent.indexOf('MSIE') >= 0 || userAgent.match(/Trident.*rv\:11\./)
+      userAgent &&
+      (userAgent.indexOf('MSIE') >= 0 || userAgent.match(/Trident.*rv:11\./))
     )
   }
 
