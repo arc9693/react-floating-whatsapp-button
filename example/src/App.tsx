@@ -36,10 +36,8 @@ let FloatingWhatsAppInitialPropValues: FloatingWhatsAppProps = {
 }
 
 const App = () => {
-  const [
-    floatingWhatsAppPropValues,
-    setFloatingWhatsAppPropValues
-  ] = React.useState(FloatingWhatsAppInitialPropValues)
+  const [floatingWhatsAppPropValues, setFloatingWhatsAppPropValues] =
+    React.useState(FloatingWhatsAppInitialPropValues)
 
   const onFppUpdate = (e: React.FormEvent<any>): void => {
     const curr = floatingWhatsAppPropValues
@@ -55,7 +53,51 @@ const App = () => {
         </h3>
       </div>
       <div className='row'>
-        <p>Note: Change values in the input boxes to modify configuration.</p>
+        <div className='col-8 mt-2 mb-2'>
+          <p>Note: Change values in the input boxes to modify configuration.</p>
+        </div>
+        <div
+          className='col-4 mt-2 mb-2'
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end'
+          }}
+        >
+          <button
+            type='button'
+            className='btn btn-secondary btn-sm'
+            onClick={(e: any) => {
+              navigator.clipboard.writeText(`<FloatingWhatsApp
+                buttonImage="${floatingWhatsAppPropValues.buttonImage}"
+                phone="${floatingWhatsAppPropValues.phone}"
+                zIndex=${floatingWhatsAppPropValues.zIndex}
+                popupMessage="${floatingWhatsAppPropValues.popupMessage}"
+                backgroundColor="${floatingWhatsAppPropValues.backgroundColor}"
+                position="${floatingWhatsAppPropValues.position}"
+                headerColor="${floatingWhatsAppPropValues.headerColor}"
+                headerTitle="${floatingWhatsAppPropValues.headerTitle}"
+                autoOpenTimeout=${floatingWhatsAppPropValues.autoOpenTimeout}
+                size="${floatingWhatsAppPropValues.size}"
+              />`)
+              const currentTarget = e.currentTarget
+              const init = currentTarget.innerHTML
+              currentTarget.innerHTML = 'Copied!'
+              setTimeout(
+                () => {
+                  currentTarget.innerHTML = init
+                },
+                2000,
+                currentTarget
+              )
+            }}
+            style={{
+              width: '100%'
+            }}
+          >
+            <i className='fas fa-copy'></i> Copy react component with prop
+            values to clipboard
+          </button>
+        </div>
         <div className='col-12'>
           <div className='input-group mb-3'>
             <span className='input-group-text'>Phone number</span>
