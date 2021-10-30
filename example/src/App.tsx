@@ -94,18 +94,42 @@ const App = () => {
             />
           </div>
           <div className='input-group mb-3'>
-            <span className='input-group-text'>Bg Color</span>
+            <span className='input-group-text'>Popup Auto Open Timeout</span>
+            <input
+              type='number'
+              className='form-control'
+              placeholder='Popup Auto Open Timeout'
+              aria-label='Popup Auto Open Timeout'
+              onChange={onFppUpdate}
+              value={floatingWhatsAppPropValues.autoOpenTimeout}
+              name='autoOpenTimeout'
+            />
+          </div>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>Header Color</span>
             <input
               type='color'
               className='form-control'
-              placeholder='Bg Color'
-              aria-label='Bg Color'
+              placeholder='Header Color'
+              aria-label='Header Color'
               onChange={onFppUpdate}
-              value={floatingWhatsAppPropValues.backgroundColor}
-              name='backgroundColor'
+              value={floatingWhatsAppPropValues.headerColor}
+              name='headerColor'
               style={{
                 height: 'auto'
               }}
+            />
+          </div>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>Header Title</span>
+            <input
+              type='string'
+              className='form-control'
+              placeholder='Header Title'
+              aria-label='Header Title'
+              onChange={onFppUpdate}
+              value={floatingWhatsAppPropValues.headerTitle}
+              name='headerTitle'
             />
           </div>
           <div className='input-group mb-3'>
@@ -126,7 +150,36 @@ const App = () => {
               }}
             />
           </div>
-          <div className='input-group'>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>Button size</span>
+            <input
+              type='string'
+              className='form-control'
+              placeholder='Button size'
+              aria-label='Button size'
+              onChange={onFppUpdate}
+              value={floatingWhatsAppPropValues.size}
+              name='size'
+            />
+          </div>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>
+              Button Image Background Color
+            </span>
+            <input
+              type='color'
+              className='form-control'
+              placeholder='Button Image Background Color'
+              aria-label='Button Image Background Color'
+              onChange={onFppUpdate}
+              value={floatingWhatsAppPropValues.backgroundColor}
+              name='backgroundColor'
+              style={{
+                height: 'auto'
+              }}
+            />
+          </div>
+          <div className='input-group mb-5'>
             <span className='input-group-text'>
               Button Image <br /> (Base64 image string)
             </span>
@@ -148,6 +201,10 @@ const App = () => {
         popupMessage={floatingWhatsAppPropValues.popupMessage}
         backgroundColor={floatingWhatsAppPropValues.backgroundColor}
         position={floatingWhatsAppPropValues.position}
+        headerColor={floatingWhatsAppPropValues.headerColor}
+        headerTitle={floatingWhatsAppPropValues.headerTitle}
+        autoOpenTimeout={floatingWhatsAppPropValues.autoOpenTimeout}
+        size={floatingWhatsAppPropValues.size}
       />
     </div>
   )
